@@ -13,6 +13,7 @@ write application / library / tests to test all the dependencies
       - Including debugging symbols (-g typically) for GNU/Linux.
     - Option to build in release mode
       - Including optimizations (-O3 as well as -march=native)
+    - Add Warnings flags (including Wstrict-aliasing)
     - Add Doxyfile to generate documentation into seperate docs folder
     - Add Windows support
       - Allow building for x86 on Windows if possible.
