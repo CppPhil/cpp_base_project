@@ -1,0 +1,31 @@
+add .gitignore
+add into github repository
+
+write application / library / tests to test all the dependencies
+    - try to test something that requires boost to be built
+    - make the CMakeLists.txt file for all that stuff.
+      - look here: https://github.com/CppPhil/vcpkg_example/blob/master/how_to.md
+        for the vcpkg.cmake file path thing.
+    - The application thing should only really have the main.cpp
+    - The library thing should be a statically linked library containing
+      everything else, except for the tests.
+    - The tests should be just the test application, linking with the statically
+      linked library.
+    - Option to build in debug mode
+      - Including debugging symbols (-g typically) for GNU/Linux.
+    - Option to build in release mode
+      - Including optimizations (-O3 as well as -march=native)
+    - Add Windows support
+      - Allow building for x86 on Windows if possible.
+    - Add travis as well as appveyor CI
+      - Add some static analysis into the CI
+        - Add UBSAN in CI
+        - Add thread sanitizer in CI
+        - Add address sanitizer in CI
+        - Add valgrind support in CI
+
+setup stuff for use with Visual Studio Code.
+
+add instructions on how to use the stuff into a README.md file.
+    - Add links to the documentation for the dependencies.
+
