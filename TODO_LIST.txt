@@ -1,8 +1,6 @@
-add .gitignore
-add into github repository
-
 write application / library / tests to test all the dependencies
     - try to test something that requires boost to be built
+    - build it all into a seperate build folder.
     - make the CMakeLists.txt file for all that stuff.
       - look here: https://github.com/CppPhil/vcpkg_example/blob/master/how_to.md
         for the vcpkg.cmake file path thing.
