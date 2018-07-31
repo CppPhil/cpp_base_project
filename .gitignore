@@ -137,16 +137,25 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Binaries ###
+bin/*
+!bin/.gitdir
+
 ### Dependencies ###
-# brigand library
-dependencies/libraries/brigand
+deps/*
+!deps/install_dependencies.sh
+!deps/libraries/.gitdir
+!deps/package_manager/.gitdir
 
-# expected-lite library
-dependencies/libraries/expected-lite
+### Documentation ###
+doc/*
+!doc/.gitdir
 
-# philslib library
-dependencies/libraries/philslib
+### Static and shared libraries ###
+lib/*
+!lib/.gitdir
 
-# vcpkg package manager
-dependencies/package_manager/vcpkg
+### Object files ###
+obj/*
+!obj/.gitdir
 

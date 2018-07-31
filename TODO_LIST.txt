@@ -1,8 +1,16 @@
-Unix project structure
+project structure:
+    bin      : executables
+    deps     : dependencies
+    doc      : documentation
+    include  : header files
+    lib      : static and shared libraries
+    obj      : object files
+    src      : source files
+    test/src : test sources
 
 write application / library / tests to test all the dependencies
     - try to test something that requires boost to be built
-    - build it all into a seperate build folder.
+    - build it all into a seperate obj folder, but have the executables to bin.
     - make the CMakeLists.txt file for all that stuff.
       - look here: https://github.com/CppPhil/vcpkg_example/blob/master/how_to.md
         for the vcpkg.cmake file path thing.
