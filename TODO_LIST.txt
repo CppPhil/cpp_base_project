@@ -1,3 +1,5 @@
+Unix project structure
+
 write application / library / tests to test all the dependencies
     - try to test something that requires boost to be built
     - build it all into a seperate build folder.
@@ -25,6 +27,12 @@ write application / library / tests to test all the dependencies
         - Add valgrind support in CI
 
 setup stuff for use with Visual Studio Code.
+    - test building debug / release
+    - test building x86 / x64 on Windows if possible.
+    - test rebuilding
+    - test cleaning.
+    - test debugging
+    - make sure all the files end up in the right places
 
 add instructions on how to use the stuff into a README.md file.
     - Add links to the documentation for the dependencies.
