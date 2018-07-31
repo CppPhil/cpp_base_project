@@ -17,7 +17,8 @@ if [ "$#" -ne 1 ]; then
 fi
 
 if [ "$1" == "Debug" ] || [ "$1" == "Release" ] ; then
-    CC=$C_COMPILER CXX=$CXX_COMPILER cmake -DCMAKE_TOOLCHAIN_FILE=$VCPKG_CMAKE -DCMAKE_BUILD_TYPE=$1 $DIR/..
+    cd $DIR
+    CC=$C_COMPILER CXX=$CXX_COMPILER cmake -DCMAKE_TOOLCHAIN_FILE=$VCPKG_CMAKE -DCMAKE_BUILD_TYPE=$1 -G "Unix Makefiles" $DIR/..
     cmake --build $DIR -- -j2
     exit 0
 fi

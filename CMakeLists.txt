@@ -70,6 +70,11 @@ endif()
 # project name
 project(cpp_base_project)
 
+# output directories
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
+
 # Find platform specific multithreading support
 find_package(Threads REQUIRED)
 

@@ -1,11 +1,10 @@
 project structure:
     bin      : executables
-    build    : build scripts
+    build    : build scripts and artifacts
     deps     : dependencies
     doc      : documentation
     include  : header files
     lib      : static and shared libraries
-    obj      : object files
     src      : source files
     test/src : test sources
 

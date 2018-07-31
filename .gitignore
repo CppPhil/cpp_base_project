@@ -159,7 +159,7 @@ doc/*
 lib/*
 !lib/.gitdir
 
-### Object files ###
-obj/*
-!obj/.gitdir
+### Build artifacts ###
+build/*
+!build/build.sh
 
