@@ -144,7 +144,11 @@ bin/*
 ### Dependencies ###
 deps/*
 !deps/install_dependencies.sh
+!deps/libraries
+deps/libraries/*
 !deps/libraries/.gitdir
+!deps/package_manager
+deps/package_manager/*
 !deps/package_manager/.gitdir
 
 ### Documentation ###
