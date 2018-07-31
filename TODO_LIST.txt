@@ -4,7 +4,7 @@ project structure:
     deps     : dependencies
     doc      : documentation
     include  : header files
-    lib      : static and shared libraries
+    lib      : static and shared libraries+
     src      : source files
     test/src : test sources
 
