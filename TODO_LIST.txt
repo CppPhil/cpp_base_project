@@ -1,5 +1,6 @@
 project structure:
     bin      : executables
+    build    : build scripts
     deps     : dependencies
     doc      : documentation
     include  : header files
@@ -12,6 +13,7 @@ write application / library / tests to test all the dependencies
     - try to test something that requires boost to be built
     - build it all into a seperate obj folder, but have the executables to bin.
     - make the CMakeLists.txt file for all that stuff.
+      - Don't use file GLOB, add all the sources manually.
       - look here: https://github.com/CppPhil/vcpkg_example/blob/master/how_to.md
         for the vcpkg.cmake file path thing.
     - The application thing should only really have the main.cpp
@@ -19,12 +21,20 @@ write application / library / tests to test all the dependencies
       everything else, except for the tests.
     - The tests should be just the test application, linking with the statically
       linked library.
+    - Test with something that requires threads.
     - Option to build in debug mode
       - Including debugging symbols (-g typically) for GNU/Linux.
     - Option to build in release mode
       - Including optimizations (-O3 as well as -march=native)
     - Add Warnings flags (including Wstrict-aliasing)
-    - Add Doxyfile to generate documentation into seperate docs folder
+    - make it so that there can be a setup bash script that'll be run
+      after having fetched the git dependencies to set 'em up.
+    - make it so that there's some file that contains all the packages to
+      fetch via git
+    - make it so that there's some file that contains all the packages to
+      fetch via vcpkg
+    - Add clang-format
+    - Add Doxyfile to generate documentation into seperate doc folder
     - Add Windows support
       - Allow building for x86 on Windows if possible.
     - Add travis as well as appveyor CI
@@ -41,7 +51,9 @@ setup stuff for use with Visual Studio Code.
     - test cleaning.
     - test debugging
     - make sure all the files end up in the right places
+    - make sure that you can just use it out of the box after having cloned it.
 
 add instructions on how to use the stuff into a README.md file.
     - Add links to the documentation for the dependencies.
+document the directory structure etc.
 
