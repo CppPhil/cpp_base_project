@@ -25,6 +25,7 @@ write application / library / tests to test all the dependencies
       - Including debugging symbols (-g typically) for GNU/Linux.
     - Option to build in release mode
       - Including optimizations (-O3 as well as -march=native)
+        - Also add additional optmization flags such as -funroll-loops etc.
     - Add Warnings flags (including Wstrict-aliasing)
     - make it so that there can be a setup bash script that'll be run
       after having fetched the git dependencies to set 'em up.
