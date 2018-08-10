@@ -56,4 +56,5 @@ setup stuff for use with Visual Studio Code.
 add instructions on how to use the stuff into a README.md file.
     - Add links to the documentation for the dependencies.
 document the directory structure etc.
+add clang format
 
