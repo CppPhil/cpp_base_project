@@ -27,6 +27,10 @@ write application / library / tests to test all the dependencies
       - Including optimizations (-O3 as well as -march=native)
         - Also add additional optmization flags such as -funroll-loops etc.
     - Add Warnings flags (including Wstrict-aliasing)
+    - Option in the CMakeLists.txt to set one of the GSL assert modes
+      // 1. GSL_TERMINATE_ON_CONTRACT_VIOLATION: std::terminate will be called (default)
+      // 2. GSL_THROW_ON_CONTRACT_VIOLATION: a gsl::fail_fast exception will be thrown
+      // 3. GSL_UNENFORCED_ON_CONTRACT_VIOLATION: nothing happens
     - make it so that there can be a setup bash script that'll be run
       after having fetched the git dependencies to set 'em up.
     - make it so that there's some file that contains all the packages to
