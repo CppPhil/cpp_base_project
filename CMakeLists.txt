@@ -85,12 +85,14 @@ set(LIBRARY_NAME cpp_base_project_lib)
 set(LIB_HEADERS
     ./include/a.hpp
     ./include/philslib_function.hpp
-    ./include/expected_lite_function.hpp)
+    ./include/expected_lite_function.hpp
+    ./include/brigand_function.hpp)
     
 set(LIB_SOURCES
     ./src/a.cpp
     ./src/philslib_function.cpp
-    ./src/expected_lite_function.cpp)
+    ./src/expected_lite_function.cpp
+    ./src/brigand_function.cpp)
     
 add_library(${LIBRARY_NAME} STATIC "${LIB_HEADERS}" "${LIB_SOURCES}")
 
@@ -113,7 +115,8 @@ set(UNIT_TEST_NAME cpp_base_project_unittest)
 set(TEST_SOURCES
     ./test/src/test_main.cpp
     ./test/src/philslib_function_test.cpp
-    ./test/src/expected_lite_function_test.cpp)
+    ./test/src/expected_lite_function_test.cpp
+    ./test/src/brigand_function_test.cpp)
     
 add_executable(${UNIT_TEST_NAME}
     "${TEST_SOURCES}"
