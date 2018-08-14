@@ -91,7 +91,8 @@ set(LIB_HEADERS
     ./include/expected_lite_function.hpp
     ./include/brigand_function.hpp
     ./include/boost_function.hpp
-    ./include/gsl_function.hpp)
+    ./include/gsl_function.hpp
+    ./include/fmt_function.hpp)
     
 set(LIB_SOURCES
     ./src/a.cpp
@@ -99,7 +100,8 @@ set(LIB_SOURCES
     ./src/expected_lite_function.cpp
     ./src/brigand_function.cpp
     ./src/boost_function.cpp
-    ./src/gsl_function.cpp)
+    ./src/gsl_function.cpp
+    ./src/fmt_function.cpp)
     
 add_library(${LIBRARY_NAME} STATIC "${LIB_HEADERS}" "${LIB_SOURCES}")
 
@@ -129,7 +131,8 @@ set(TEST_SOURCES
     ./test/src/expected_lite_function_test.cpp
     ./test/src/brigand_function_test.cpp
     ./test/src/boost_function_test.cpp
-    ./test/src/gsl_function_test.cpp)
+    ./test/src/gsl_function_test.cpp
+    ./test/src/fmt_function_test.cpp)
     
 add_executable(${UNIT_TEST_NAME}
     "${TEST_SOURCES}"
