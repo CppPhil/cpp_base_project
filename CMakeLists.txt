@@ -79,6 +79,9 @@ find_package(Threads REQUIRED)
 # Find fmt
 find_package(fmt CONFIG REQUIRED)
 
+# Find boost
+find_package(Boost REQUIRED COMPONENTS atomic chrono container context contract coroutine date_time exception filesystem graph iostreams locale log log_setup math_c99 math_c99f math_c99l math_tr1 math_tr1f math_tr1l program_options random regex serialization signals stacktrace_addr2line stacktrace_backtrace stacktrace_basic stacktrace_noop system thread timer type_erasure wave wserialization)
+
 ## STATICALLY LINKED LIBRARY
 set(LIBRARY_NAME cpp_base_project_lib)
 
@@ -86,18 +89,22 @@ set(LIB_HEADERS
     ./include/a.hpp
     ./include/philslib_function.hpp
     ./include/expected_lite_function.hpp
-    ./include/brigand_function.hpp)
+    ./include/brigand_function.hpp
+    ./include/boost_function.hpp)
     
 set(LIB_SOURCES
     ./src/a.cpp
     ./src/philslib_function.cpp
     ./src/expected_lite_function.cpp
-    ./src/brigand_function.cpp)
+    ./src/brigand_function.cpp
+    ./src/boost_function.cpp)
     
 add_library(${LIBRARY_NAME} STATIC "${LIB_HEADERS}" "${LIB_SOURCES}")
 
 target_link_libraries(${LIBRARY_NAME} PRIVATE Threads::Threads)
 target_link_libraries(${LIBRARY_NAME} PRIVATE fmt::fmt fmt::fmt-header-only)
+target_link_libraries(${LIBRARY_NAME} PRIVATE ${Boost_LIBRARIES})
+target_include_directories(${LIBRARY_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
 ## END STATICALLY LINKED LIBRARY
 
 ## APPLICATION
@@ -106,6 +113,8 @@ add_executable(${PROJECT_NAME} "${LIB_HEADERS}" "${APPLICATION_SOURCE_FILES}")
 target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBRARY_NAME})
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt fmt::fmt-header-only)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
 ## END APPLICATION
 
 ## TEST
@@ -116,7 +125,8 @@ set(TEST_SOURCES
     ./test/src/test_main.cpp
     ./test/src/philslib_function_test.cpp
     ./test/src/expected_lite_function_test.cpp
-    ./test/src/brigand_function_test.cpp)
+    ./test/src/brigand_function_test.cpp
+    ./test/src/boost_function_test.cpp)
     
 add_executable(${UNIT_TEST_NAME}
     "${TEST_SOURCES}"
@@ -127,6 +137,8 @@ add_test(Unittest ${UNIT_TEST_NAME})
 target_link_libraries(${UNIT_TEST_NAME} PRIVATE ${LIBRARY_NAME})
 target_link_libraries(${UNIT_TEST_NAME} PRIVATE Threads::Threads)
 target_link_libraries(${UNIT_TEST_NAME} PRIVATE fmt::fmt fmt::fmt-header-only)
+target_link_libraries(${UNIT_TEST_NAME} PRIVATE ${Boost_LIBRARIES})
+target_include_directories(${UNIT_TEST_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
 ## END TEST
 
 # Include path for philslib
