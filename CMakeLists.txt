@@ -2,8 +2,6 @@
 # CMake version
 cmake_minimum_required(VERSION 3.1)
 
-message(${CMAKE_TOOLCHAIN_FILE})
-
 # C++ version
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++latest")
@@ -85,10 +83,12 @@ find_package(fmt CONFIG REQUIRED)
 set(LIBRARY_NAME cpp_base_project_lib)
 
 set(LIB_HEADERS
-    ./include/a.hpp)
+    ./include/a.hpp
+    ./include/philslib_function.hpp)
     
 set(LIB_SOURCES
-    ./src/a.cpp)
+    ./src/a.cpp
+    ./src/philslib_function.cpp)
     
 add_library(${LIBRARY_NAME} STATIC "${LIB_HEADERS}" "${LIB_SOURCES}")
 
@@ -109,7 +109,8 @@ enable_testing()
 set(UNIT_TEST_NAME cpp_base_project_unittest)
 
 set(TEST_SOURCES
-    ./test/src/test_main.cpp)
+    ./test/src/test_main.cpp
+    ./test/src/philslib_function_test.cpp)
     
 add_executable(${UNIT_TEST_NAME}
     "${TEST_SOURCES}"
@@ -121,6 +122,15 @@ target_link_libraries(${UNIT_TEST_NAME} PRIVATE ${LIBRARY_NAME})
 target_link_libraries(${UNIT_TEST_NAME} PRIVATE Threads::Threads)
 target_link_libraries(${UNIT_TEST_NAME} PRIVATE fmt::fmt fmt::fmt-header-only)
 ## END TEST
+
+# Include path for philslib
+include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/philslib/include)
+
+# Include path for expected-lite
+include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/expected-lite/include)
+
+# Include path for brigand
+include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/brigand/include/standalone)
 
 # Avoid msvc problems
 if(WIN32)

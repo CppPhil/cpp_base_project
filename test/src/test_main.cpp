@@ -1,6 +1,2 @@
-#include <iostream>
-
-int main()
-{
-    std::cout << "TEST RUN\n";
-}
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <doctest/doctest.h>
