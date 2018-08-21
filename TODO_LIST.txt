@@ -38,6 +38,10 @@ write application / library / tests to test all the dependencies
     - make it so that there's some file that contains all the packages to
       fetch via vcpkg
     - Add clang-format
+      - Add some script in the root directory of the project to run clang-format
+        - Have it go into the src, include and test subdirectories and invoke
+          the fmt.sh / fmt.bat shell scripts from there.       
+// TODO: HERE
     - Add Doxyfile to generate documentation into seperate doc folder
     - Add Windows support
       - Allow building for x86 on Windows if possible.
@@ -54,6 +58,8 @@ setup stuff for use with Visual Studio Code.
     - test rebuilding
     - test cleaning.
     - test debugging
+    - see if there's some way to make it be able to run clang-format 
+      automatically.
     - make sure all the files end up in the right places
     - make sure that you can just use it out of the box after having cloned it.
 

@@ -1,11 +1,9 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 #ifdef NDEBUG
-    std::cout << "Release mode\n";
+  std::cout << "Release mode\n";
 #else
-    std::cout << "Debug mode\n";
+  std::cout << "Debug mode\n";
 #endif
 }
-
