@@ -2,5 +2,10 @@
 
 int main()
 {
-    std::cout << "application run\n";
+#ifdef NDEBUG
+    std::cout << "Release mode\n";
+#else
+    std::cout << "Debug mode\n";
+#endif
 }
+

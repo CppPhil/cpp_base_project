@@ -157,6 +157,11 @@ include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/expected-lite/include)
 # Include path for brigand
 include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/brigand/include/standalone)
 
+# GSL contract violation (only have one of these uncommented)
+add_definitions(-DGSL_THROW_ON_CONTRACT_VIOLATION)
+#add_definitions(-DGSL_TERMINATE_ON_CONTRACT_VIOLATION)
+#add_definitions(-DGSL_UNENFORCED_ON_CONTRACT_VIOLATION)
+
 # Avoid msvc problems
 if(WIN32)
     if(MSVC)
