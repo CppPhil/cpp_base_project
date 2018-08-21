@@ -43,6 +43,9 @@ write application / library / tests to test all the dependencies
           the fmt.sh / fmt.bat shell scripts from there.       
 // TODO: HERE
     - Add Doxyfile to generate documentation into seperate doc folder
+    
+    clang-format's not using the .clang-format file
+    
     - Add Windows support
       - Allow building for x86 on Windows if possible.
     - Add travis as well as appveyor CI

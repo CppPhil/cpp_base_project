@@ -10,13 +10,14 @@ struct S {
 };
 } // anonymous namespace
 
-bool philslib_function() {
+bool philslib_function() 
+{
   S s;
   pl::zero_memory(&s, sizeof(s));
 
   bool ret{true};
 
-  for (const pl::byte *it{reinterpret_cast<const pl::byte *>(&s)},
+  for (const pl::byte* it{reinterpret_cast<const pl::byte*>(&s)},
        *end{it + sizeof(s)};
        it != end; ++it) {
 

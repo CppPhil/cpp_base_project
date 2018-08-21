@@ -6,10 +6,18 @@
 
 namespace cbp {
 namespace {
-auto to_int(const char *text) -> nonstd::expected<int, std::string> {
+/*!
+ * \brief Function with internal linkage to convert a null-terminated
+ *        byte character string into an integer.
+ * \param text A null-terminated byte character string to convert to 
+ *             an integer.
+ * \return An expected containing the resulting integer or containing
+ *         a string that contains an error message on error.
+ **/
+auto to_int(const char* text) -> nonstd::expected<int, std::string> {
   using namespace std::literals::string_literals;
 
-  char *pos{nullptr};
+  char* pos{nullptr};
   auto value = std::strtol(text, &pos, 0);
 
   if (pos != text) {
@@ -30,7 +38,7 @@ bool expected_lite_function() {
   bool secondOk{false};
 
   if (ei) {
-    firstOk = *ei == 42;
+    firstOk = (*ei == 42);
   }
 
   ei = to_int(text);
