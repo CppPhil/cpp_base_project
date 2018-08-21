@@ -91,7 +91,8 @@ set(LIB_HEADERS
     ./include/brigand_function.hpp
     ./include/boost_function.hpp
     ./include/gsl_function.hpp
-    ./include/fmt_function.hpp)
+    ./include/fmt_function.hpp
+    ./include/thread_function.hpp)
     
 set(LIB_SOURCES
     ./src/philslib_function.cpp
@@ -99,7 +100,8 @@ set(LIB_SOURCES
     ./src/brigand_function.cpp
     ./src/boost_function.cpp
     ./src/gsl_function.cpp
-    ./src/fmt_function.cpp)
+    ./src/fmt_function.cpp
+    ./src/thread_function.cpp)
     
 add_library(${LIBRARY_NAME} STATIC "${LIB_HEADERS}" "${LIB_SOURCES}")
 
@@ -130,7 +132,8 @@ set(TEST_SOURCES
     ./test/src/brigand_function_test.cpp
     ./test/src/boost_function_test.cpp
     ./test/src/gsl_function_test.cpp
-    ./test/src/fmt_function_test.cpp)
+    ./test/src/fmt_function_test.cpp
+    ./test/src/thread_function_test.cpp)
     
 add_executable(${UNIT_TEST_NAME}
     "${TEST_SOURCES}"
