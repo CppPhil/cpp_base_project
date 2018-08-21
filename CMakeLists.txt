@@ -86,7 +86,6 @@ find_package(Boost REQUIRED COMPONENTS atomic chrono container context contract 
 set(LIBRARY_NAME cpp_base_project_lib)
 
 set(LIB_HEADERS
-    ./include/a.hpp
     ./include/philslib_function.hpp
     ./include/expected_lite_function.hpp
     ./include/brigand_function.hpp
@@ -95,7 +94,6 @@ set(LIB_HEADERS
     ./include/fmt_function.hpp)
     
 set(LIB_SOURCES
-    ./src/a.cpp
     ./src/philslib_function.cpp
     ./src/expected_lite_function.cpp
     ./src/brigand_function.cpp
