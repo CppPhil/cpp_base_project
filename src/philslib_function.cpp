@@ -5,27 +5,25 @@
 namespace cbp {
 namespace {
 struct S {
-  int a;
-  float b;
+    int   a;
+    float b;
 };
 } // anonymous namespace
 
-bool philslib_function() 
+bool philslib_function()
 {
-  S s;
-  pl::zero_memory(&s, sizeof(s));
+    S s;
+    pl::zero_memory(&s, sizeof(s));
 
-  bool ret{true};
+    bool ret{true};
 
-  for (const pl::byte* it{reinterpret_cast<const pl::byte*>(&s)},
-       *end{it + sizeof(s)};
-       it != end; ++it) {
-
-    if (*it != static_cast<pl::byte>(0x00U)) {
-      return false;
+    for (const pl::byte *it{reinterpret_cast<const pl::byte*>(&s)},
+         *end{it + sizeof(s)};
+         it != end;
+         ++it) {
+        if (*it != static_cast<pl::byte>(0x00U)) { return false; }
     }
-  }
 
-  return true;
+    return true;
 }
 } // namespace cbp

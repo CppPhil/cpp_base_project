@@ -41,19 +41,10 @@ write application / library / tests to test all the dependencies
       - Add some script in the root directory of the project to run clang-format
         - Have it go into the src, include and test subdirectories and invoke
           the fmt.sh / fmt.bat shell scripts from there.       
-// TODO: HERE
     - Add Doxyfile to generate documentation into seperate doc folder
-    
-    clang-format's not using the .clang-format file
-    
+    // TODO: HERE    
     - Add Windows support
       - Allow building for x86 on Windows if possible.
-    - Add travis as well as appveyor CI
-      - Add some static analysis into the CI
-        - Add UBSAN in CI
-        - Add thread sanitizer in CI
-        - Add address sanitizer in CI
-        - Add valgrind support in CI
 
 setup stuff for use with Visual Studio Code.
     - test building debug / release
@@ -66,11 +57,17 @@ setup stuff for use with Visual Studio Code.
     - make sure all the files end up in the right places
     - make sure that you can just use it out of the box after having cloned it.
 
+- Add travis as well as appveyor CI
+  - Add some static analysis into the CI
+    - Add UBSAN in CI
+    - Add thread sanitizer in CI
+    - Add address sanitizer in CI
+    - Add valgrind support in CI
+
 add instructions on how to use the stuff into a README.md file.
     - Add links to the documentation for the dependencies.
 document the directory structure etc.
 add clang format
 
 document the prerequisites required
-
 
