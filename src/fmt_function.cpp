@@ -1,5 +1,5 @@
-#include "../include/fmt_function.hpp"
 #include <fmt/format.h>
+#include <fmt_function.hpp>
 #include <string>
 
 namespace cbp {

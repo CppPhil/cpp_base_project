@@ -1,5 +1,5 @@
-#include "../include/boost_function.hpp"
 #include <boost/regex.hpp>
+#include <boost_function.hpp>
 #include <string>
 
 namespace cbp {

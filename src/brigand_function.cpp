@@ -1,5 +1,5 @@
-#include "../include/brigand_function.hpp"
 #include <brigand.hpp>
+#include <brigand_function.hpp>
 #include <type_traits>
 
 namespace cbp {

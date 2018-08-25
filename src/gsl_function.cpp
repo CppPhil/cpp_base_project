@@ -1,5 +1,5 @@
-#include "../include/gsl_function.hpp"
 #include <gsl/pointers>
+#include <gsl_function.hpp>
 
 namespace cbp {
 bool gsl_function()

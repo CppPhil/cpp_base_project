@@ -42,8 +42,8 @@ write application / library / tests to test all the dependencies
         - Have it go into the src, include and test subdirectories and invoke
           the fmt.sh / fmt.bat shell scripts from there.       
     - Add Doxyfile to generate documentation into seperate doc folder
-    // TODO: HERE    
-    - Make it so that the include folder is on the compiler include path. 
+    - Make it so that the include folder is on the compiler include path.
+        // TODO: HERE    
     - Add link time optimization (-lto)
     - Add Windows support
       - Allow building for x86 on Windows if possible.

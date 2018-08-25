@@ -1,6 +1,6 @@
-#include "../include/thread_function.hpp"
 #include <future>
 #include <string>
+#include <thread_function.hpp>
 
 namespace cbp {
 namespace {

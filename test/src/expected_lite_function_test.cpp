@@ -1,5 +1,5 @@
-#include "../../include/expected_lite_function.hpp"
 #include <doctest/doctest.h>
+#include <expected_lite_function.hpp>
 
 TEST_CASE("expected_lite_function_test")
 {
