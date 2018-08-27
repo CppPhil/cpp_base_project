@@ -47,6 +47,9 @@ write application / library / tests to test all the dependencies
     // TODO: HERE   
     - Add Windows support
       - Allow building for x86 on Windows if possible.
+    - Make it so that the package manager is installed system wide in the
+      home directory.
+       - Check whether it's already there and use it if it is.
 
 setup stuff for use with Visual Studio Code.
     - test building debug / release
