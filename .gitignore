@@ -144,6 +144,7 @@ bin/*
 ### Dependencies ###
 deps/*
 !deps/install_dependencies.sh
+!deps/install_dependencies.bat
 !deps/libraries
 deps/libraries/*
 !deps/libraries/.gitdir
@@ -162,4 +163,4 @@ lib/*
 ### Build artifacts ###
 build/*
 !build/build.sh
-
+!build/build.bat
