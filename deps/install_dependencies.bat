@@ -33,6 +33,7 @@ call %VCPKG_PATH%\bootstrap-vcpkg.bat
 %VCPKG% install ms-gsl
 %VCPKG% install doctest
 %VCPKG% install fmt
+EXIT /B 0
 
 
 :delete_directory_if_exists
