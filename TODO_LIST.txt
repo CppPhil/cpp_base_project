@@ -44,9 +44,15 @@ write application / library / tests to test all the dependencies
     - Add Doxyfile to generate documentation into seperate doc folder
     - Make it so that the include folder is on the compiler include path 
     - Add link time optimization (-lto)
-    // TODO: HERE   
+    // TODO: HERE (adding Windows support ...)
     - Add Windows support
-      - Allow building for x86 on Windows if possible.
+      - ported install_dependencies script to Windows.
+        - vcpkg fails to build Boost.Build ...
+        - vcpkg fails to build fmt, probably because it isn't smart enough to link with the Windows 10 SDK statically linked libraries ...
+      - The other scripts still need to be ported to Windows.
+        - Port format.sh to Windows
+        - Port build.sh to Windows
+      - Allow building for x86 and x64 on Windows if possible (right now it seems to do everything for just x86).
     - Make it so that the package manager is installed system wide in the
       home directory.
        - Check whether it's already there and use it if it is.
