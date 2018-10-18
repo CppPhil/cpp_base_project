@@ -4,17 +4,17 @@ REM Install git dependencies
 set "GITHUB=https://github.com"
 set "LIB_PATH=%~dp0%libraries"
 set "PHILSLIB_PATH=%LIB_PATH%\philslib"
-set "EXPECTED_LITE_PATH=%LIB_PATH%\expected-lite"
+set "EXPECTED_PATH=%LIB_PATH%\expected"
 set "BRIGAND_PATH=%LIB_PATH%\brigand"
 set "CLANG_FMT_PATH=%~dp0%clang-format"
 
 call :delete_directory_if_exists %PHILSLIB_PATH%
-call :delete_directory_if_exists %EXPECTED_LITE_PATH%
+call :delete_directory_if_exists %EXPECTED_PATH%
 call :delete_directory_if_exists %BRIGAND_PATH%
 call :delete_directory_if_exists %CLANG_FMT_PATH%
 
 git clone %GITHUB%/CppPhil/philslib.git %PHILSLIB_PATH%
-git clone %GITHUB%/martinmoene/expected-lite.git %EXPECTED_LITE_PATH%
+git clone %GITHUB%/TartanLlama/expected.git %EXPECTED_PATH%
 git clone %GITHUB%/edouarda/brigand.git %BRIGAND_PATH%
 git clone %GITHUB%/CppPhil/clang-format.git %CLANG_FMT_PATH%
 

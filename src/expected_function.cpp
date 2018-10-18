@@ -1,7 +1,7 @@
 #include <ciso646>
 #include <cstdlib>
-#include <expected_lite_function.hpp>
-#include <nonstd/expected.hpp>
+#include <expected_function.hpp>
+#include <tl/expected.hpp>
 #include <string>
 
 namespace cbp {
@@ -14,7 +14,7 @@ namespace {
  * \return An expected containing the resulting integer or containing
  *         a string that contains an error message on error.
  **/
-auto to_int(const char* text) -> nonstd::expected<int, std::string>
+auto to_int(const char* text) -> tl::expected<int, std::string>
 {
     using namespace std::literals::string_literals;
 
@@ -23,11 +23,11 @@ auto to_int(const char* text) -> nonstd::expected<int, std::string>
 
     if (pos != text) { return value; }
 
-    return nonstd::make_unexpected("'"s + text + "' isn't a number");
+    return tl::make_unexpected("'"s + text + "' isn't a number");
 }
 } // anonymous namespace
 
-bool expected_lite_function()
+bool expected_function()
 {
     static const char number[] = "42";
     static const char text[]   = "text";

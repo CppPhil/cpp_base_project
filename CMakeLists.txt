@@ -87,7 +87,7 @@ set(LIBRARY_NAME cpp_base_project_lib)
 
 set(LIB_HEADERS
     ./include/philslib_function.hpp
-    ./include/expected_lite_function.hpp
+    ./include/expected_function.hpp
     ./include/brigand_function.hpp
     ./include/boost_function.hpp
     ./include/gsl_function.hpp
@@ -96,7 +96,7 @@ set(LIB_HEADERS
     
 set(LIB_SOURCES
     ./src/philslib_function.cpp
-    ./src/expected_lite_function.cpp
+    ./src/expected_function.cpp
     ./src/brigand_function.cpp
     ./src/boost_function.cpp
     ./src/gsl_function.cpp
@@ -128,7 +128,7 @@ set(UNIT_TEST_NAME cpp_base_project_unittest)
 set(TEST_SOURCES
     ./test/src/test_main.cpp
     ./test/src/philslib_function_test.cpp
-    ./test/src/expected_lite_function_test.cpp
+    ./test/src/expected_function_test.cpp
     ./test/src/brigand_function_test.cpp
     ./test/src/boost_function_test.cpp
     ./test/src/gsl_function_test.cpp
@@ -154,8 +154,8 @@ include_directories(${CMAKE_BINARY_DIR}/../include)
 # Include path for philslib
 include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/philslib/include)
 
-# Include path for expected-lite
-include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/expected-lite/include)
+# Include path for expected
+include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/expected)
 
 # Include path for brigand
 include_directories(${CMAKE_BINARY_DIR}/../deps/libraries/brigand/include/standalone)
