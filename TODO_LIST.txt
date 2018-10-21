@@ -74,6 +74,8 @@ setup stuff for use with Visual Studio Code.
     - Add thread sanitizer in CI
     - Add address sanitizer in CI
     - Add valgrind support in CI
+    - Add CppCheck
+    - Add Clang Tidy
 
 add instructions on how to use the stuff into a README.md file.
     - Add links to the documentation for the dependencies.
